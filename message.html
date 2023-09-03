@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            background-image: url(love.png);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ff6b6b;
+        }
+
+        #content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #love-letter {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #media-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .media-item {
+            margin: 10px;
+        }
+
+        .media-container-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #generate-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #generate-button:hover {
+            background-color: #ff4242;
+        }
+    </style>
+</head>
+<body>
+    <h1>Love Messages &amp; Media</h1>
+    <div id="content-container">
+        <p id="love-letter">My Dearest Nikki ❤️,<br><br>
+            I want you to know how much you mean to me. You are the sunshine that brightens in my darkest days, 
+            the love that makes my heart skip a beat, and the reason I smile each morning. With you,
+            every moment is special and filled with love. please betaa be with me just imagin how our life will be happy,
+            please betaa don't leave me betaaa please apudhu vunde laga vundhu betaa please i want u anthe nuvu leka pothe inka naa life waste maa, 
+            i have imagined my hole life betaa, please marry me betaa.<br><br>
+            Please enjoy these special moments we've shared together:</p>
+            <button id="generate-button">Generate Love Message</button>
+        
+        <div class="media-container-row">
+            <div class="media-item">
+                <img src="love-gif-1.gif" alt="Image 1" width="500" height="500">
+            </div>  
+            <div class="media-item">
+                <video controls width="300" height="400">
+                    <source src="love.mp4" type="video/mp4">
+                </video>
+                <p>"This video says everything betaa how happy we are."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loveMessages = [
+            "You make every moment special.",
+            "Love u end thak betaaa.",
+            "You are my sunshine on a cloudy day.",
+            "You complete me in every way.",
+            "I cherish every moment with you.",
+            "You are the love of my life.",
+        ];
+
+        const loveLetterElement = document.getElementById("love-letter");
+        const generateButton = document.getElementById("generate-button");
+
+        generateButton.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * loveMessages.length);
+            const randomMessage = loveMessages[randomIndex];
+            loveLetterElement.textContent = `My Dearest Nikki ❤️,\n\n${randomMessage}`;
+        });
+    </script>
+</body>
+</html>
